@@ -1,0 +1,184 @@
+									* {
+										padding: 0px;
+										margin: 0px;
+									}
+									
+									.box {
+										width: 1000px;
+										height: 1500px;
+										background-color: ghostwhite;
+										margin: 0 auto;
+									}
+									
+									.header {
+										width: 1000px;
+										height: 70px;
+										background-color: white
+									}
+									
+									.logo {
+										float: left;
+										margin-top: 20px;
+									}
+									
+									img {
+										width: 130px;
+										height: 35px;
+									}
+									
+									.ss {
+										width: 470px;
+										height: 32px;
+										border: 1px solid gray;
+										border-radius: 16px;
+										background-color: white;
+										float: left;
+										margin-top: 20px;
+										margin-left: 115px;
+										margin-right: 115px;
+									}
+									
+									.select {
+										width: 40px;
+										height: 32px;
+										line-height: 32px;
+										margin-left: 16px;
+										border: hidden;
+										float: left;
+									}
+									
+									.wz {
+										text-align: center;
+										font-size: 15px;
+										color: gray;
+										display: inline-block;
+									}
+									
+									.sougou {
+										float: right;
+										display: inline-block;
+										width: 150px;
+										height: 32px;
+										border-radius: 16px;
+										background-color: #1479d7;
+										line-height: 32px;
+										text-align: center;
+									}
+									
+									a {
+										text-decoration: none;
+									}
+									
+									.lj {
+										width: 150px;
+										height: 50px;
+										float: right;
+										background-color: white;
+										margin-top: 15px;
+									}
+									
+									#lljj {
+										width: 150px;
+										height: 50px;
+									}
+									
+									.nav {
+										width: 1000px;
+										height: 45px;
+										background-color: #1479d7;
+										margin-bottom: 20px;
+										border-radius: 5px;
+									}
+									
+									#ul {
+										padding-left: 20px;
+										padding-right: 20px;
+									}
+									
+									ul li {
+										float: left;
+										list-style-type: none;
+									}
+									
+									ul li a {
+										display: block;
+										width: 55px;
+										height: 44px;
+										color: white;
+										text-align: center;
+										line-height: 44px;
+										text-decoration: none;
+										font-size: 16px;
+									}
+									div ul li a:hover {
+				background: whitesmoke;
+				color: #1479D7;
+				
+			}
+									
+									.gengduo {
+										font-size: 18px;
+									}
+									
+									.main {
+										width: 1000px;
+										height: 1000px;
+										background-color: white;
+									}
+									
+									.news {
+										width: 670px;
+										height: 1000px;
+										background-color: #ADFF2F;
+										margin-right: 20px;
+										float: left;
+									}
+									
+									.h {
+										width: 670px;
+										height: 75px;
+										background-color: #FF7F50;
+										margin-bottom: 30px;
+									}
+									.h img{
+										width: 670px;
+										height: 75px;
+									}
+									
+									.f {
+										width: 670px;
+										height: 500px;
+										background-color: #FFFF00;
+									}
+									.f img{
+										width: 670px;
+										height: 500px;
+									}
+									
+									.aside {
+										width: 310px;
+										height: 1000px;
+										background-color: #DEB887;
+										float: left;
+									}
+									
+									.hh {
+										width: 310px;
+										height: 75px;
+										background-color: aqua;
+										margin-bottom: 30px;
+									}
+									.hh img{
+										width: 310px;
+										height: 75px;
+									}
+									
+									.ff {
+										width: 310px;
+										height: 500px;
+										background-color: beige;
+									}
+									.ff img{
+										width: 310px;
+										height: 500px;
+									}
