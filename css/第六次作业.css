@@ -129,7 +129,7 @@
 									.news {
 										width: 670px;
 										height: 1000px;
-										background-color: #ADFF2F;
+										background-color: white;
 										margin-right: 20px;
 										float: left;
 									}
@@ -148,7 +148,7 @@
 									.f {
 										width: 670px;
 										height: 500px;
-										background-color: #FFFF00;
+										background-color: white;
 									}
 									.f img{
 										width: 670px;
@@ -158,7 +158,7 @@
 									.aside {
 										width: 310px;
 										height: 1000px;
-										background-color: #DEB887;
+										background-color: white;
 										float: left;
 									}
 									
