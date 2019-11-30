@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jQuery全屏动画切换游戏角色介绍代码</title>
+
+<link rel="stylesheet" type="text/css" href="../css特效目录/reset.css">
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Montserrat:400,700'>
+<link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Poppins:400,700'>
+<link rel="stylesheet" href="../css特效目录/style.css">
+
+</head>
+<body>
+<div class="slider__warpper">
+	  <div class="flex__container flex--pikachu flex--active" data-slide="1">
+		<div class="flex__item flex__item--left">
+		  <div class="flex__content">
+			<p class="text--sub">sc.chinaz.com</p>
+			<h1 class="text--big">Pikachu</h1>
+			<p class="text--normal">适用浏览器：360、FireFox、Chrome、Opera、傲游、搜狗、世界之窗. <br>不支持Safari、IE8及以下浏览器。</p>
+			<p class="text--normal">来源：<a href="http://www.lanrenzhijia.com/" target="_blank">懒人素材</a></p>
+		  </div>
+		  <p class="text__background">Pikachu</p>
+		</div>
+		<div class="flex__item flex__item--right"></div>
+		<img class="pokemon__img" src="https://s20.postimg.org/efpniu8m5/pikachu.png" />
+	  </div>
+	  <div class="flex__container flex--piplup animate--start" data-slide="2">
+		<div class="flex__item flex__item--left">
+		  <div class="flex__content">
+			<p class="text--sub">Pokemon Gen IV</p>
+			<h1 class="text--big">Piplup</h1>
+			<p class="text--normal">Piplup is the Water-type Starter Pokémon of the Sinnoh region. It was introduced in Generation IV. Piplup has a strong sense of self-esteem. It seldom accepts food that people give because of its pride.</p>
+		  </div>
+		  <p class="text__background">Piplup</p>
+		</div>
+		<div class="flex__item flex__item--right"></div>
+		<img class="pokemon__img" src="https://s20.postimg.org/d1y0nj9ct/pilup.png" />
+	  </div>
+	  <div class="flex__container flex--blaziken animate--start" data-slide="3">
+		<div class="flex__item flex__item--left">
+		  <div class="flex__content">
+			<p class="text--sub">Pokemon Gen III</p>
+			<h1 class="text--big">Blaziken</h1>
+			<p class="text--normal">Blaziken is the Fire/Fighting-type Starter Pokémon of the Hoenn region, introduced in Generation III. Blaziken is a large, bipedal, humanoid bird-like Pokémon that resembles a rooster.</p>
+		  </div>
+		  <p class="text__background">Blaziken</p>
+		</div>
+		<div class="flex__item flex__item--right"></div>
+		<img class="pokemon__img" src="https://s20.postimg.org/nxpeivual/blaziken.png" />
+	  </div>
+	  <div class="flex__container flex--dialga animate--start" data-slide="4">
+		<div class="flex__item flex__item--left">
+		  <div class="flex__content">
+			<p class="text--sub">Pokemon Gen IV</p>
+			<h1 class="text--big">Dialga</h1>
+			<p class="text--normal">Dialga is a Steel/Dragon-type Legendary Pokémon. Dialga is a sauropod-like Pokémon. It is mainly blue with some gray, metallic portions, such as its chest plate, which has a diamond in the center. It also has various, light blue lines all over
+			  its body.</p>
+		  </div>
+		  <p class="text__background">Dialga</p>
+		</div>
+		<div class="flex__item flex__item--right"></div>
+		<img class="pokemon__img" src="https://s20.postimg.org/hla991r8d/dialga.png" />
+	  </div>
+	  <div class="flex__container flex--zekrom animate--start" data-slide="5">
+		<div class="flex__item flex__item--left">
+		  <div class="flex__content">
+			<p class="text--sub">Pokemon Gen V</p>
+			<h1 class="text--big">Zekrom</h1>
+			<p class="text--normal">Zekrom is a Dragon/Electric-type Legendary Pokémon. It is part of the Tao Trio, along with Reshiram and Kyurem. Zekrom is a large, black draconian Pokémon that seems to share its theme with its counterpart, Reshiram. It has piercing red eyes and
+			  dark gray to black skin that seems to be armor-like.</p>
+		  </div>
+		  <p class="text__background">Zekrom</p>
+		</div>
+		<div class="flex__item flex__item--right"></div>
+		<img class="pokemon__img" src="https://s20.postimg.org/v61186719/zekrom.png" />
+	  </div>
+	</div>
+
+	<div class="slider__navi">
+	  <a href="#" class="slide-nav active" data-slide="1">pikachu</a>
+	  <a href="#" class="slide-nav" data-slide="2">piplup</a>
+	  <a href="#" class="slide-nav" data-slide="3">blaziken</a>
+	  <a href="#" class="slide-nav" data-slide="4">dialga</a>
+	  <a href="#" class="slide-nav" data-slide="5">zekrom</a>
+	</div>
+
+<script src="../js特效目录/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$('.slide-nav').on('click', function(e) {
+	  e.preventDefault();
+	  // get current slide
+	  var current = $('.flex--active').data('slide'),
+		// get button data-slide
+		next = $(this).data('slide');
+
+	  $('.slide-nav').removeClass('active');
+	  $(this).addClass('active');
+
+	  if (current === next) {
+		return false;
+	  } else {
+		$('.slider__warpper').find('.flex__container[data-slide=' + next + ']').addClass('flex--preStart');
+		$('.flex--active').addClass('animate--end');
+		setTimeout(function() {
+		  $('.flex--preStart').removeClass('animate--start flex--preStart').addClass('flex--active');
+		  $('.animate--end').addClass('animate--start').removeClass('animate--end flex--active');
+		}, 800);
+	  }
+	});
+</script>
+
+</body>
+</html>
